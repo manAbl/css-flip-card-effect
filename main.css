@@ -1,0 +1,53 @@
+body {
+  overflow: hidden;
+  background: lightblue;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+.card-wrapper {
+  margin-top: 12rem;
+  perspective: 700;
+}
+
+.card {
+  color: white;
+  width: 26rem;
+  height: 26rem;
+  padding: 2rem;
+  font-size: 1.2rem;
+  position: relative;
+  text-align: center;
+  transition: all .5s ease;
+  transform-style: preserve-3d;
+}
+
+.card:hover {
+  cursor: pointer;
+  transform: rotatey(180deg);
+}
+
+.back {
+  transform: rotatey(180deg);
+  background: darkred;
+}
+
+.front {
+  background: slateblue;
+}
+
+.front,
+.back {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  padding: inherit;
+  backface-visibility: hidden;
+  box-shadow: 0 0 20px darkslateblue;
+}
